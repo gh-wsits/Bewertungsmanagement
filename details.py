@@ -120,3 +120,4 @@ def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
             header_stammdaten.on('click', lambda: setattr(inhalt_stammdaten, 'visible', not inhalt_stammdaten.visible))
             header_medien.on('click', lambda: setattr(inhalt_medien, 'visible', not inhalt_medien.visible))
             header_bewertung.on('click', lambda: setattr(inhalt_bewertung, 'visible', not inhalt_bewertung.visible))
+            

@@ -318,3 +318,4 @@ def testzeitraum_loeschen(zeitraum_id):
         return True
     except Exception:
         return False
+        
