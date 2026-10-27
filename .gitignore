@@ -1,0 +1,12 @@
+# Ignoriere die Datenbankdatei
+projekte.db
+
+# Ignoriere alle Dateien im Bilder-Ordner
+/images/
+
+# Ignoriere die virtuelle Umgebung
+venv/
+
+# Ignoriere alle Python-Cache-Ordner im gesamten Projekt
+**/__pycache__/
+*.pyc
