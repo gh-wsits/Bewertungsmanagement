@@ -1,4 +1,4 @@
-# Bewertungsmanagement 3.0
+# Bewertungsmanagement
 ### Strategisches Intranet-Warenwirtschafts- & Produkttest-Dashboard
 
 Ein hochoptimiertes, kaufmännisches Kontrollzentrum zur Erfassung, Verwaltung und Ertrags-Auswertung von Produkttests. Da Lieferantenportale oft intransparent agieren, befähigt dieses Tool den Anwender (Otto), die eigene Performance, finanzielle Gegenwerte (Warenertrag) und Lieferanten-Zuverlässigkeiten autark zu überwachen.

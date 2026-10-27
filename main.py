@@ -47,7 +47,7 @@ def main_page():
         
         # TITELLEISTE
         with ui.row().classes('w-full justify-between items-center border-b border-slate-200 pb-1 mb-1 shrink-0'):
-            ui.label('Bewertungsmanagement 3.0').classes('text-xl font-bold text-slate-850 track-tight')
+            ui.label('Bewertungsmanagement').classes('text-xl font-bold text-slate-850 track-tight')
 
         # ==============================================================================
         # STRATEGISCHES PERFORMANZ- & ERTRAGS-COCKPIT (LIVE-KPI-BAR)
@@ -348,6 +348,6 @@ def zeige_status_details():
 
 # 4. SERVER-START (Port 8090)
 if __name__ in {"__main__", "__mp_main__"}:
-    ui.run(title='Bewertungsmanagement 3.0', reload=False, port=8090, show=False)
+    ui.run(title='Bewertungsmanagement', reload=False, port=8090, show=False)
 
 # https://share.google/aimode/4LUOZ30lI2YbvqcrD
