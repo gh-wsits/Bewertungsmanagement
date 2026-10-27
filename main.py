@@ -349,5 +349,3 @@ def zeige_status_details():
 # 4. SERVER-START (Port 8090)
 if __name__ in {"__main__", "__mp_main__"}:
     ui.run(title='Bewertungsmanagement', reload=False, port=8090, show=False)
-
-# https://share.google/aimode/4LUOZ30lI2YbvqcrD
