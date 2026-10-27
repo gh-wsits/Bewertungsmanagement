@@ -357,3 +357,4 @@ def get_event_handlers(p_inputs, p_tabelle, p_suchfeld, p_galerie_panel, p_gross
         'suche': suche, 'row_click': row_click, 'leeren': maske_leeren,
         'loeschen': artikel_loeschen, 'aktualisieren': artikel_aktualisieren, 'hinzufuegen': artikel_hinzufuegen
     }
+    

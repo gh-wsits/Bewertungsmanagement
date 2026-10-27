@@ -119,3 +119,4 @@ def baue_bewertungs_inhalt(inhalt_bewertung, inputs):
 
         with ui.row().classes('w-full justify-end mt-1 pt-1 border-t border-slate-100 shrink-0'):
             ui.button('Testbericht speichern', on_click=lambda: events.bewertung_speichern()).props('dense unelevated').style('background-color: #475569 !important; color: white !important;').classes('rounded px-4 text-xs font-semibold shadow-sm')
+            

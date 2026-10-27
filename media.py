@@ -201,3 +201,4 @@ def bild_loeschen(galerie_panel, grossbild, tabelle):
         tabelle.rows = database.hole_artikel()
 
     ui.timer(0.01, hole_und_loeschen, once=True)
+    

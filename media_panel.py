@@ -64,3 +64,4 @@ def baue_medien_bereich(inhalt_medien, handler, galerie_panel, grossbild, upload
             img.style.transformOrigin = 'center center';
         }
     }''')
+    
