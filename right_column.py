@@ -7,7 +7,7 @@ import media
 import media_panel
 import review_panel
 
-def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
+def create_right_column(haupt_splitter, inputs, tabelle, suchfeld):
     """Baut das rechte Bedienfeld mit Stammdaten, Medien und lädt das Bewertungsmodul."""
     
     with haupt_splitter.after:
@@ -19,9 +19,9 @@ def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
                           on_click=lambda: haupt_splitter.set_value(30))\
                           .props('dense flat text-color=blue-600').classes('bg-blue-50 w-full text-xs font-semibold py-1 rounded').bind_visibility_from(haupt_splitter, 'value', backward=lambda v: v == 0)
 
-            # ------------------------------------------------------------------
-            # BORDER 1: STAMMDATEN (UNZERSTÖRBARER CONTAINER-FIX)
-            # ------------------------------------------------------------------
+            # -------------------- #
+            # BORDER 1: STAMMDATEN #
+            # -------------------- #
             with ui.column().classes('w-full p-3 bg-white border border-slate-200 rounded-md shadow-sm shrink-0') as box_stammdaten:
                 header_stammdaten = ui.row().classes('w-full items-center gap-2 border-b border-slate-200 pb-1 mb-2 cursor-pointer hover:bg-slate-50 p-0.5 rounded')
                 with header_stammdaten:
@@ -74,9 +74,9 @@ def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
                             inputs['btn_aktualisieren'] = ui.button('Artikel aktualisieren').props('dense unelevated').style('background-color: #475569 !important; color: white !important;').classes('rounded px-3 text-xs font-semibold shadow-sm')
                             inputs['btn_hinzufuegen'] = ui.button('Artikel hinzufügen').props('dense unelevated').style('background-color: #475569 !important; color: white !important;').classes('rounded px-3 text-xs font-semibold shadow-sm')
 
-            # ------------------------------------------------------------------
-            # BORDER 2: PRODUKT-MEDIEN & GALERIE
-            # ------------------------------------------------------------------
+            # ---------------------------------- #
+            # BORDER 2: PRODUKT-MEDIEN & GALERIE #
+            # ---------------------------------- #
             with ui.column().classes('w-full p-3 bg-white border border-slate-200 rounded-md shadow-sm mt-1') as box_medien:
                 header_medien = ui.row().classes('w-full items-center gap-2 border-b border-slate-200 pb-1 mb-2 cursor-pointer hover:bg-slate-50 p-0.5 rounded')
                 with header_medien:
@@ -100,9 +100,9 @@ def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
                     inputs['btn_main'] = ui.element('div')  
                     inputs['btn_del_bild'] = ui.element('div')
 
-            # ------------------------------------------------------------------
-            # BORDER 3: ARTIKEL-BEWERTUNG
-            # ------------------------------------------------------------------
+            # --------------------------- #
+            # BORDER 3: ARTIKEL-BEWERTUNG #
+            # --------------------------- #
             with ui.column().classes('w-full p-3 bg-white border border-slate-200 rounded-md shadow-sm mt-1') as box_bewertung:
                 header_bewertung = ui.row().classes('w-full items-center gap-2 border-b border-slate-200 pb-1 mb-2 cursor-pointer hover:bg-slate-50 p-0.5 rounded')
                 with header_bewertung:
@@ -112,9 +112,9 @@ def baue_rechtes_panel(haupt_splitter, inputs, tabelle, suchfeld):
                 with ui.column().classes('w-full font-normal gap-2') as inhalt_bewertung:
                     review_panel.baue_bewertungs_inhalt(inhalt_bewertung, inputs)
 
-            # ==================================================================
-            # 3. NATIVE EVENTS BINDEN
-            # ==================================================================
+            # -------------------- #
+            # NATIVE EVENTS BINDEN #
+            # -------------------- #
             events.get_event_handlers(inputs, tabelle, suchfeld, galerie_panel, grossbild, uploader, haupt_splitter)
 
             header_stammdaten.on('click', lambda: setattr(inhalt_stammdaten, 'visible', not inhalt_stammdaten.visible))

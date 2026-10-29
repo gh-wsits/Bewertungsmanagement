@@ -3,6 +3,7 @@ projekte.db
 
 # Ignoriere alle Dateien im Bilder-Ordner
 /images/
+/.continue/
 
 # Ignoriere die virtuelle Umgebung
 venv/
